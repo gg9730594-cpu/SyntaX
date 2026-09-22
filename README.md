@@ -26,5 +26,5 @@
 
 1. **Клонируйте репозиторий:**
    ```bash
-   git clone https://github.com/gg9730594-cpu/SyntaX
+   git clone https://github.com/gg9730594-cpu/SyntaX.git
    cd SyntaX
