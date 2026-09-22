@@ -36,12 +36,12 @@ class TextEditor:
         menubar = tk.Menu(self.root)
         
         file_menu = tk.Menu(menubar, tearoff=0)
-        file_menu.add_command(label="Open...", command=self.open_file, accelerator="Ctrl+O")
-        file_menu.add_command(label="Save", command=self.save_file, accelerator="Ctrl+S")
+        file_menu.add_command(label="Открыть...", command=self.open_file, accelerator="Ctrl+O")
+        file_menu.add_command(label="Сохранить", command=self.save_file, accelerator="Ctrl+S")
         file_menu.add_separator()
-        file_menu.add_command(label="Exit", command=self.root.quit)
+        file_menu.add_command(label="Выход", command=self.root.quit)
         
-        menubar.add_cascade(label="File", menu=file_menu)
+        menubar.add_cascade(label="Файл", menu=file_menu)
         self.root.config(menu=menubar)
 
         self.root.bind("<Control-o>", lambda e: self.open_file())
@@ -76,7 +76,7 @@ class TextEditor:
         self.line_numbers.yview(*args)
 
     def _setup_tags(self):
-        """Creating styles using Pygments."""
+        """ Создание стилей с помощью библиотеки Pygments """
         for token, color in self.styles.items():
             tag_name = str(token)
             self.text_area.tag_configure(tag_name, foreground=color)
