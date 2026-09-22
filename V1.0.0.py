@@ -128,7 +128,7 @@ class TextEditor:
                 content = f.read()
                 self.text_area.delete("1.0", tk.END)
                 self.text_area.insert("1.0", content)
-            self.root.title(f"Python Code Editor - {filepath}")
+            self.root.title(f"SyntaX - {filepath}")
             self.on_content_changed()
 
     def save_file(self):
